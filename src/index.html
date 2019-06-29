@@ -21,26 +21,26 @@
 
             <!--Header-->
             <header class="tm-bg-sea-blue uk-position-relative uk-background-primary">
-                <img class="uk-position-center-right" src="images/bg-sea-blu.svg" alt="">
+                <img class="uk-position-center-right uk-visible@s" src="images/bg-sea-blu.svg" alt="">
                 <div class="uk-container-large uk-margin-auto">
-                    <nav uk-navbar>
+                    <nav class="tm-mobile-adaptive" uk-navbar>
                         <div class="uk-navbar-left">
 
-                            <!--mobile menu toggle-->
-                            <a href="#offcanvas-overlay" class="uk-navbar-toggle uk-hidden@l"
-                               uk-navbar-toggle-icon uk-toggle></a>
+                            <!--&lt;!&ndash;mobile menu toggle&ndash;&gt;-->
+                            <!--<a href="#offcanvas-overlay" class="uk-navbar-toggle uk-hidden@s"-->
+                            <!--uk-navbar-toggle-icon uk-toggle></a>-->
 
                             <!--logo-->
                             <a class="uk-navbar-item uk-logo" href="/">
-                                <img src="images/logo.png" alt="">
+                                <img src="images/logo-black.svg" alt="">
                             </a>
-                            <div class="uk-navbar-item uk-text-bold">
+                            <div class="uk-visible@m uk-navbar-item uk-text-bold">
                                 Франшиза детского развивающего<br/>центра “Фабрика ума”
                             </div>
 
                         </div>
 
-                        <div class="uk-navbar-right uk-margin-right">
+                        <div class="uk-navbar-right uk-margin-right uk-flex-wrap-middle uk-padding-small">
 
                             <ul class="tm-icon-social uk-iconnav">
                                 <li><a href="#">
@@ -55,11 +55,12 @@
                             </ul>
 
                             <div class="uk-navbar-item">
-                                <form action="javascript:void(0)">
+                                <form class="uk-flex uk-flex-wrap uk-flex-center" action="javascript:void(0)">
                                     <input class="uk-input uk-form-width-small uk-margin-right" type="text"
                                            placeholder="+7 963 313 4156">
-                                    <button class="tm-button-order uk-button">
-                                        <svg class="uk-margin-small-right" width="35" height="23" viewBox="0 0 35 23"
+                                    <button class="tm-button-order uk-button" type="button" uk-toggle="target: #modalFormPhone">
+                                        <svg class="uk-visible@m uk-margin-small-right" width="35" height="23"
+                                             viewBox="0 0 35 23"
                                              fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M13.7671 21.4115L14.8435 13.4142C14.873 13.1948 15.0432 13.021 15.2619 12.9868L22.8185 11.8061C23.391 11.7167 23.3783 10.8879 22.8033 10.816L15.2749 9.87495C15.0499 9.84683 14.872 9.67082 14.8415 9.44615L13.7743 1.59329C13.7193 1.18877 14.1461 0.892424 14.5059 1.08524L33.962 11.5112C34.3212 11.7036 34.3117 12.2219 33.9457 12.401L14.4824 21.9273C14.1236 22.103 13.7138 21.8075 13.7671 21.4115Z"
                                                   fill="white"/>
@@ -79,27 +80,19 @@
 
             <!-- Section -->
             <div class="tm-top-slider uk-section uk-position-relative">
-                <img class="uk-position-bottom-right uk-position-z-index" src="images/img-top-slider-1.png" alt="">
-                <div class="tm-img-video-top">
-                    <div class="uk-position-relative">
-                        <img src="images/img-video-top.png" alt="">
-                        <img class="uk-position-center" src="images/video-play-control.svg" alt="">
-                        <div class="tm-text-video">
-                            <a href="#" class="uk-light uk-text-bold">
-                                Смотреть видео о занятиях центра
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                <img class="tm-img-top-adaptive uk-visible@m uk-position-bottom-right uk-position-z-index"
+                     src="images/img-top-slider-1.png" alt="">
+
                 <div class="uk-container-large uk-margin-auto">
                     <div class="uk-margin-large-bottom">
                         <h1>Открой свой детский нейротренинговый центр</h1>
-                        <h4>и зарабатывай <span class="uk-light">160.000Р за 3 недели</span></h4>
+                        <h4>и зарабатывай <span class="uk-light">120.000Р за 3 недели</span></h4>
                     </div>
-                    <button class="tm-button-bussiness uk-button uk-button-secondary">Получить презентацию<br/> и
+                    <button class="tm-button-bussiness uk-button uk-button-secondary" type="button" uk-toggle="target: #modalFormPresentation">Получить презентацию<br/> и
                         бизнес-план
                     </button>
-                    <div class="uk-grid-small uk-child-width-1-2 uk-width-1-2" uk-grid>
+                    <div class="uk-grid-small uk-child-width-1-2@s uk-child-width-1-1@m uk-child-width-1-2@l uk-width-1-4@m uk-width-1-2@l"
+                         uk-grid>
                         <div class="uk-flex uk-margin-bottom">
                             <div class="tm-pict-slider-wrap">
                                 <img src="images/pict-top-slider-1.svg" alt="">
@@ -134,18 +127,32 @@
                         </div>
                     </div>
                 </div>
-
+                <!--БЛОК СПРЯТАН-->
+                <div class="uk-hidden tm-img-video-top">
+                    <a href="#">
+                        <div class="uk-position-relative">
+                            <img src="images/img-video-top.png" alt="">
+                            <img class="uk-position-center" src="images/video-play-control.svg" alt="">
+                            <div class="tm-text-video">
+                            <span class="uk-light uk-text-bold">
+                                Смотреть видео о занятиях центра
+                            </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!---->
             </div>
 
             <!-- Section -->
             <div class="uk-section">
                 <div class="uk-container-large uk-margin-auto">
                     <h2>Нейрум - новый детский проект</h2>
-                    <div class="uk-child-width-1-2 uk-flex-between uk-flex-middle" uk-grid>
-                        <div class="uk-width-1-3">
-                            <h5 class="tm-text-violet">от УК "Нейрум Group"</h5>
+                    <div class="uk-child-width-1-2 uk-flex-between uk-flex-top" uk-grid>
+                        <div class="uk-width-2-5@m uk-width-1-3@xl">
+                            <h5 class="tm-text-violet">от Управляющей Компании "Нейрум Group"</h5>
                             <div class="tm-text-violet uk-text-large uk-margin-medium-bottom">создателя крупнейшей в
-                                мире сети нейротренинговых Центров Развития Мозга:
+                                мире сети нейротренинговых Центров Развития Мозга
                             </div>
                             <button class="tm-button-badge tm-badge-manage tm-margin-bottom uk-button">Успейте
                                 забронировать свой город!
@@ -160,15 +167,17 @@
                                 <div class="uk-margin">
                                     <input class="tm-input-manage uk-input" type="text" placeholder="Ваш город">
                                 </div>
-                                <button class="tm-button-bussiness uk-button uk-button-secondary" type="submit">
+                                <button class="tm-button-bussiness uk-margin-remove-bottom uk-button uk-button-secondary"
+                                        type="submit">
                                     Забронировать город
                                 </button>
                             </form>
                         </div>
-                        <div class="uk-width-2-3">
-                            <div class="uk-flex-inline uk-flex-wrap uk-flex-right uk-position-relative">
+                        <div class="uk-width-3-5@m uk-width-2-3@xl">
+                            <div class="uk-flex-inline uk-flex-wrap uk-flex-center uk-flex-right@m uk-position-relative">
                                 <div>
                                     <div class="tm-panel">
+                                        <img class="trash-panel-1" src="images/trash-2.svg" alt="">
                                         <div class="tm-pict-panel-wrap">
                                             <img src="images/pict-project-1.svg" alt="">
                                         </div>
@@ -180,18 +189,20 @@
                                 </div>
                                 <div>
                                     <div class="tm-panel">
+                                        <img class="trash-panel-2" src="images/trash-1.svg" alt="">
                                         <div class="tm-pict-panel-wrap">
                                             <img src="images/pict-project-2.svg" alt="">
                                         </div>
                                         <div>
                                             <div class="tm-panel-header">50</div>
-                                            <div class="uk-text-bold">проданных франшиз в РФ и зарубежо</div>
+                                            <div class="uk-text-bold">проданных франшиз в РФ и зарубежом</div>
                                         </div>
                                     </div>
                                 </div>
                                 <div></div>
                                 <div>
                                     <div class="tm-panel">
+                                        <img class="trash-panel-3" src="images/trash-1.svg" alt="">
                                         <div class="tm-pict-panel-wrap">
                                             <img src="images/pict-project-3.svg" alt="">
                                         </div>
@@ -201,7 +212,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <img class="tm-img-project-1" src="images/img-project-1.png" alt="">
+                                <img class="tm-img-project-1 uk-visible@m" src="images/img-project-1.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -274,8 +285,172 @@
             <div class="tm-why-neuro uk-section uk-position-relative">
                 <div class="uk-container-large uk-margin-auto">
                     <h3>Почему выбирают нейротренинговые центры?</h3>
-                    <img src="images/point_map.png" alt="">
-                    <button class="tm-button-bussiness tm-button-secondary uk-button">Получить презентацию<br/>и бизнес
+                    <div class="tm-point-map uk-visible@xl">
+                        <div class="tm-point-map-carrier"></div>
+                        <div class="tm-point-img tm-poimg-1">
+                            <div class="uk-position-relative">
+                                <img src="images/barishnya.png" alt="">
+                                <div class="tm-message tm-mleft tm-message-1">
+                                    Интересно, чувствую перспективу
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tm-point-img tm-poimg-2">
+                            <div class="uk-position-relative">
+                                <img src="images/pacanchik.png" alt="">
+                                <div class="tm-message tm-message-2">
+                                    Начал заниматься общественной деятельностью и социальным предпринимательством.
+                                    Данный вид услуг очень подходит для моих целей. Планирую развивать социальную
+                                    направленность, вероятно часть услуг будет бесплатна для отдельных групп населения.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tm-point-img tm-poimg-3">
+                            <div class="uk-position-relative">
+                                <img src="images/barishnya.png" alt="">
+                                <div class="tm-message tm-message-3">
+                                    Интерес к науке. Интересна именно эта тематика.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tm-point-img tm-poimg-4">
+                            <div class="uk-position-relative">
+                                <img src="images/pacanchik.png" alt="">
+                                <div class="tm-message tm-mleft tm-message-4">
+                                    Интересный формат, который помогает развиваться и взрослым и детям, востребованный в
+                                    нашем городе.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tm-point-img tm-poimg-5">
+                            <div class="uk-position-relative">
+                                <img src="images/pacanchik.png" alt="">
+                                <div class="tm-message tm-message-5">
+                                    Начал заниматься общественной деятельностью и социальным предпринимательством.
+                                    Данный вид услуг очень подходит для моих целей. Планирую развивать социальную
+                                    направленность, вероятно часть услуг будет бесплатна для отдельных групп населения.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tm-point-img tm-poimg-6">
+                            <div class="uk-position-relative">
+                                <img src="images/barishnya.png" alt="">
+                                <div class="tm-message tm-message-6">
+                                    Интересное, перспективное направление
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tm-point-img tm-poimg-7">
+                            <div class="uk-position-relative">
+                                <img src="images/barishnya.png" alt="">
+                                <div class="tm-message tm-mleft tm-message-7">
+                                    Перспективное направление интересная новая тема отзывается с моей жизненной миссией
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tm-point-img tm-poimg-8">
+                            <div class="uk-position-relative">
+                                <img src="images/barishnya.png" alt="">
+                                <div class="tm-message tm-message-8">
+                                    Интересный формат, который помогает развиваться и взрослым и детям, востребованный в
+                                    нашем городе.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tm-point-img tm-poimg-9">
+                            <div class="uk-position-relative">
+                                <img src="images/barishnya.png" alt="">
+                                <div class="tm-message tm-message-9">
+                                    Есть большая клиентская база + требуется диверсификация бизнеса. Бизнес нравится за
+                                    счет широкой применимости, полезности для людей, а также инновационности,
+                                    позволяющей выделиться среди кучи других развивающих центров.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tm-point-img tm-poimg-10">
+                            <div class="uk-position-relative">
+                                <img src="images/pacanchik.png" alt="">
+                                <div class="tm-message tm-message-10">
+                                    Понятный бизнес, интересная для меня тема нравится идея
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tm-point-img tm-poimg-11">
+                            <div class="uk-position-relative">
+                                <img src="images/pacanchik.png" alt="">
+                                <div class="tm-message tm-message-11">
+                                    Желание не зависеть от работодателя, приносить людям благо и саморазвиваться,
+                                    привлекая специалистов, помогающих детям и взрослым.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-hidden@xl">
+                        <ul uk-accordion>
+                            <li class="uk-open">
+                                <a class="tm-noafter uk-accordion-title" href="#">Скрыть/Показать мнения</a>
+                                <div class="uk-accordion-content">
+                                    <div class="tm-point-alt uk-child-width-1-2@m uk-margin-medium-bottom" uk-grid="masonry: true">
+                                        <div class="uk-flex uk-flex-wrap uk-flex-middle">
+                                            <img src="images/barishnya.png" alt="">
+                                            <span class="uk-margin-left">Интересно, чувствую перспективу</span>
+                                        </div>
+                                        <div class="uk-flex uk-flex-wrap uk-flex-middle">
+                                            <img src="images/pacanchik.png" alt="">
+                                            <span class="uk-margin-left">Начал заниматься общественной деятельностью и социальным предпринимательством.
+                                Данный вид услуг очень подходит для моих целей. Планирую развивать социальную
+                                направленность, вероятно часть услуг будет бесплатна для отдельных групп населения.</span>
+                                        </div>
+                                        <div class="uk-flex uk-flex-wrap uk-flex-middle">
+                                            <img src="images/barishnya.png" alt="">
+                                            <span class="uk-margin-left">Интерес к науке. Интересна именно эта тематика.</span>
+                                        </div>
+                                        <div class="uk-flex uk-flex-wrap uk-flex-middle">
+                                            <img src="images/pacanchik.png" alt="">
+                                            <span class="uk-margin-left">Интересный формат, который помогает развиваться и взрослым и детям, востребованный в
+                                    нашем городе.</span>
+                                        </div>
+                                        <div class="uk-flex uk-flex-wrap uk-flex-middle">
+                                            <img src="images/pacanchik.png" alt="">
+                                            <span class="uk-margin-left">Начал заниматься общественной деятельностью и социальным предпринимательством.
+                                    Данный вид услуг очень подходит для моих целей. Планирую развивать социальную
+                                    направленность, вероятно часть услуг будет бесплатна для отдельных групп населения.</span>
+                                        </div>
+                                        <div class="uk-flex uk-flex-wrap uk-flex-middle">
+                                            <img src="images/barishnya.png" alt="">
+                                            <span class="uk-margin-left">Интересное, перспективное направление</span>
+                                        </div>
+                                        <div class="uk-flex uk-flex-wrap uk-flex-middle">
+                                            <img src="images/barishnya.png" alt="">
+                                            <span class="uk-margin-left">Перспективное направление интересная новая тема отзывается с моей жизненной миссией</span>
+                                        </div>
+                                        <div class="uk-flex uk-flex-wrap uk-flex-middle">
+                                            <img src="images/barishnya.png" alt="">
+                                            <span class="uk-margin-left">Интересный формат, который помогает развиваться и взрослым и детям, востребованный в
+                                    нашем городе.</span>
+                                        </div>
+                                        <div class="uk-flex uk-flex-wrap uk-flex-middle">
+                                            <img src="images/barishnya.png" alt="">
+                                            <span class="uk-margin-left">Есть большая клиентская база + требуется диверсификация бизнеса. Бизнес нравится за
+                                    счет широкой применимости, полезности для людей, а также инновационности,
+                                    позволяющей выделиться среди кучи других развивающих центров.</span>
+                                        </div>
+                                        <div class="uk-flex uk-flex-wrap uk-flex-middle">
+                                            <img src="images/pacanchik.png" alt="">
+                                            <span class="uk-margin-left">Понятный бизнес, интересная для меня тема, нравится идея</span>
+                                        </div>
+                                        <div class="uk-flex uk-flex-wrap uk-flex-middle">
+                                            <img src="images/pacanchik.png" alt="">
+                                            <span class="uk-margin-left">Желание не зависеть от работодателя, приносить людям благо и саморазвиваться,
+                                    привлекая специалистов, помогающих детям и взрослым.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="tm-button-bussiness tm-button-secondary uk-button uk-margin-remove-bottom" type="button" uk-toggle="target: #modalFormPresentation">Получить
+                        презентацию<br/>и бизнес
                         план
                     </button>
                 </div>
@@ -286,10 +461,10 @@
                 <div class="uk-container-large uk-margin-auto">
                     <h2 class="uk-margin-remove">Инновационный проект</h2>
                     <button class="tm-button-badge tm-badge-manage tm-margin-double-bottom uk-button">от создателей
-                        Центра Развития мозга
+                        Центра Развития Мозга
                     </button>
-                    <div class="uk-grid-large uk-child-width-1-2 uk-flex-between" uk-grid>
-                        <div class="uk-width-1-3">
+                    <div class="uk-grid-large uk-child-width-1-2@m uk-flex-between" uk-grid>
+                        <div class="uk-width-1-2@m uk-width-2-5@l uk-width-1-3@xl">
                             <p class="tm-innovative-thesis uk-text-small"><span class="tm-text-secondary tm-text-fat">Крупнейшая в России сеть нейротренинговых центров начала свою работу в 2013 году</span>
                                 как учреждение,
                                 оказывающее помощь детям с нарушениями внимания, проблемами усидчивости и другими
@@ -311,14 +486,13 @@
                                 развития ребенка. <span class="tm-text-secondary tm-text-fat">Центр получил официальное подтверждение эффективности технологии и
                                 бизнес-модели, и начал реализацию франшиз.</span></p>
                         </div>
-                        <div class="uk-position-relative uk-flex uk-flex-bottom">
+                        <div class="tm-mh-adaptive uk-position-relative uk-flex uk-flex-bottom uk-flex-center">
                             <img class="uk-position-bottom-right" src="images/img-martin.png" alt="">
                             <div class="uk-padding-small">
                                 <div class="tm-innovative-thesis uk-margin-medium-bottom uk-text-large uk-text-bold">
                                     Илья Андреевич Мартынов, нейробиолог
                                 </div>
-                                <div class="uk-text-small uk-margin-medium-bottom uk-position-relative">Один из
-                                    основателей Центра
+                                <div class="uk-text-small uk-margin-medium-bottom uk-position-relative">Основатель Центра
                                 </div>
                             </div>
                         </div>
@@ -334,7 +508,7 @@
                     <button class="tm-button-badge tm-badge-newage tm-margin-double-bottom uk-button">(neurofeedback)
                     </button>
                     <div class="" uk-grid>
-                        <div class="uk-width-1-3">
+                        <div class="uk-width-1-2@l uk-width-1-3@xl">
                             <ul class="tm-neurobos-list">
                                 <li>
                                     <div class="tm-pioner-list-header">Безопасность и эффективность технологии
@@ -361,8 +535,9 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="uk-width-2-3 uk-position-relative">
-                            <img class="tm-z-low uk-position-bottom-right" src="images/img-neurobos.png" alt="">
+                        <div class="uk-width-1-2@l uk-width-2-3@xl uk-position-relative">
+                            <img class="uk-visible@l tm-z-low uk-position-bottom-right" src="images/img-neurobos.png"
+                                 alt="">
                         </div>
                     </div>
                 </div>
@@ -370,28 +545,32 @@
 
             <!-- Section -->
             <div class="tm-future-today uk-section uk-position-relative">
-                <img class="uk-position-center" src="images/img-double-ellipse.png" alt="">
-                <img class="uk-position-bottom-left" src="images/img-future-today.png" alt="">
+                <img class="uk-visible@m uk-position-center" src="images/img-double-ellipse.png" alt="">
+                <img class="uk-visible@m uk-position-bottom-left" src="images/img-future-today.png" alt="">
                 <div class="uk-container-large uk-margin-auto">
-                    <h3>Образование будущего, доступное уже сегодня</h3>
+                    <h3 class="tm-blue-worm-small uk-position-relative">Образование будущего, доступное уже сегодня</h3>
                     <div class="uk-flex uk-flex-right">
-                        <div class="uk-width-2-3">
-                            <div class="uk-flex-inline uk-flex-wrap uk-flex-right uk-position-relative">
+                        <div class="uk-width-2-3@l">
+                            <div class="uk-flex-inline uk-flex-wrap uk-flex-center uk-flex-right@m uk-position-relative">
                                 <div>
                                     <div class="tm-panel tm-panel-alt">
+                                        <img class="trash-panel-1" src="images/trash-2.svg" alt="">
                                         <div class="tm-pict-panel-wrap">
-                                            <img src="images/icon-future-1.svg" alt="">
+                                            <img class="uk-visible@s" src="images/icon-future-1.svg" alt="">
                                         </div>
                                         <div>
-                                            <div class="tm-panel-header-alt">Оборудования новейшего поколения</div>
-                                            <div class="uk-text-small">Нейрогарнитура, регистрирующая ЭЭГ, анализирует потенциал конкретного ребенка</div>
+                                            <div class="tm-panel-header-alt">Оборудование новейшего поколения</div>
+                                            <div class="uk-text-small">Нейрогарнитура, регистрирующая ЭЭГ, анализирует
+                                                потенциал конкретного ребенка
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div>
                                     <div class="tm-panel">
+                                        <img class="trash-panel-2" src="images/trash-1.svg" alt="">
                                         <div class="tm-pict-panel-wrap">
-                                            <img src="images/icon-future-2.svg" alt="">
+                                            <img class="uk-visible@s" src="images/icon-future-2.svg" alt="">
                                         </div>
                                         <div>
                                             <div class="tm-panel-header-alt uk-margin-bottom">Уникальная программа</div>
@@ -402,6 +581,7 @@
                                 <div></div>
                                 <div>
                                     <div class="tm-panel">
+                                        <img class="trash-panel-3" src="images/trash-1.svg" alt="">
                                         <div class="tm-pict-panel-wrap">
                                             <img src="images/icon-future-3.svg" alt="">
                                         </div>
@@ -426,9 +606,10 @@
                         нейротренингов Нейрум
                     </button>
                     <div class="tm-panels-holder">
-                        <h4 class="tm-h4">Это оптимальное решение<br/>для тех, кто:</h4>
+                        <h4 class="tm-h4 tm-blue-worm uk-position-relative">Это оптимальное решение<br/>для тех, кто:</h4>
                         <div class="tm-panel-placement-one">
                             <div class="tm-panel-large">
+                                <img class="trash-panel-4" src="images/yellow-worm.svg" alt="">
                                 <div class="tm-pict-panel-wrap">
                                     <img src="images/img-panel-large-1.png" alt="">
                                 </div>
@@ -439,6 +620,7 @@
                         </div>
                         <div class="tm-panel-placement-two">
                             <div class="tm-panel-large">
+                                <img class="trash-panel-5" src="images/yellow-worm-small.svg" alt="">
                                 <div class="tm-pict-panel-wrap">
                                     <img src="images/img-panel-large-2.png" alt="">
                                 </div>
@@ -449,6 +631,7 @@
                         </div>
                         <div class="tm-panel-placement-three">
                             <div class="tm-panel-large">
+                                <img class="trash-panel-4" src="images/yellow-worm.svg" alt="">
                                 <div class="tm-pict-panel-wrap">
                                     <img src="images/img-panel-large-3.png" alt="">
                                 </div>
@@ -468,28 +651,29 @@
                     <button class="tm-button-badge tm-badge-newage tm-margin-double-bottom uk-button">предложив
                         родителям то, что им важно
                     </button>
-                    <div class="uk-flex">
+                    <div class="uk-flex uk-flex-wrap uk-flex-center uk-flex-left@l">
                         <div>
                             <div class="tm-panel-big">
                                 <div class="tm-pict-panel-wrap">
                                     <img src="images/pict-panel-big-1.svg" alt="">
                                 </div>
-                                <h4 class="tm-panel-header">Доказанная эффективность </h4>
+                                <h4 class="tm-panel-header tm-white-worm uk-position-relative">Доказанная эффективность </h4>
                                 <div class="tm-panel-text">
                                     Независимые исследования подтверждают, что измеримые результаты детей, прошедших
                                     курс нейротренингов, значительно выше, чем у посетителей обычных курсов:
                                 </div>
                             </div>
                             <div class="tm-subpanel-big">
-                                <div class="uk-child-width-auto uk-grid-small uk-flex-center" uk-grid>
+                                <div class="uk-child-width-1-3 uk-child-width-auto@xl uk-grid-small uk-flex-center"
+                                     uk-grid>
                                     <div>
-                                        <img src="images/certificate.png" alt="">
+                                        <a href="docs/doc-1.pdf"><img src="images/certificate.png" alt=""></a>
                                     </div>
                                     <div>
-                                        <img src="images/certificate.png" alt="">
+                                        <a href="docs/doc-1.pdf"><img src="images/certificate.png" alt=""></a>
                                     </div>
                                     <div>
-                                        <img src="images/certificate.png" alt="">
+                                        <a href="docs/doc-1.pdf"><img src="images/certif-new.jpg" alt=""></a>
                                     </div>
                                 </div>
                             </div>
@@ -499,22 +683,23 @@
                                 <div class="tm-pict-panel-wrap">
                                     <img src="images/pict-panel-big-2.svg" alt="">
                                 </div>
-                                <h4 class="tm-panel-header">WOW-эффект</h4>
+                                <h4 class="tm-panel-header tm-white-worm uk-position-relative">Мировое признание</h4>
                                 <div class="tm-panel-text">
                                     Новая для России технология, используемая ведущими престижными образовательными
                                     учреждениями Европы и США.
                                 </div>
                             </div>
                             <div class="tm-subpanel-big">
-                                <div class="uk-child-width-auto uk-grid-small uk-flex-center" uk-grid>
+                                <div class="uk-child-width-1-3 uk-child-width-auto@xl uk-grid-small uk-flex-center"
+                                     uk-grid>
                                     <div>
-                                        <img src="images/certificate.png" alt="">
+                                        <a href="docs/doc-1.pdf"><img src="images/certificate.png" alt=""></a>
                                     </div>
                                     <div>
-                                        <img src="images/certificate.png" alt="">
+                                        <a href="docs/doc-1.pdf"><img src="images/certificate.png" alt=""></a>
                                     </div>
                                     <div>
-                                        <img src="images/certificate.png" alt="">
+                                        <a href="docs/doc-1.pdf"><img src="images/certificate.png" alt=""></a>
                                     </div>
                                 </div>
                             </div>
@@ -525,12 +710,13 @@
 
             <!-- Section -->
             <div class="tm-after-week uk-section uk-position-relative">
-                <img class="uk-position-bottom-right" src="images/img-after-week.png" alt="">
+                <img class="tm-img-week-adaptive uk-position-bottom-right" src="images/img-after-week.png" alt="">
                 <div class="uk-container-large uk-margin-auto">
                     <h3>Начните запись первых посетителей уже через 7 дней!</h3>
-                    <div class="uk-width-2-3 uk-child-width-auto" uk-grid>
+                    <div class="tm-week-width uk-child-width-auto uk-flex-center" uk-grid>
                         <div>
                             <div class="tm-panel-small">
+                                <img class="trash-panel-6" src="images/trash-4.svg" alt="">
                                 <div class="tm-dots-arrow-1">
 
                                 </div>
@@ -539,12 +725,15 @@
                                 </div>
                                 <div>
                                     <div class="tm-panel-header">за 1 день</div>
-                                    <div class="uk-text-bold">Заключите договор, чтобы мы могли начать отправку оборудования</div>
+                                    <div class="uk-text-bold">Заключите договор, чтобы мы могли начать отправку
+                                        оборудования
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div>
-                            <div class="tm-panel-small uk-margin-xlarge-top">
+                            <div class="tm-panel-adaptive tm-panel-small uk-margin uk-margin-xlarge-top">
+                                <img class="trash-panel-6" src="images/trash-4.svg" alt="">
                                 <div class="tm-dots-arrow-2"></div>
                                 <div class="tm-pict-panel-wrap">
                                     <img src="images/pict-week-2.svg" alt="">
@@ -557,20 +746,25 @@
                         </div>
                         <div>
                             <div class="tm-panel-small">
+                                <img class="trash-panel-6" src="images/trash-4.svg" alt="">
                                 <div class="tm-dots-arrow-3"></div>
                                 <div class="tm-pict-panel-wrap">
                                     <img src="images/pict-week-3.svg" alt="">
                                 </div>
                                 <div>
                                     <div class="tm-panel-header">на 8 день</div>
-                                    <div class="uk-text-bold">Подготовьте мебель, расставьте оборудование и начните работу по привлечению клиентов</div>
+                                    <div class="uk-text-bold">Подготовьте мебель, расставьте оборудование и начните
+                                        работу по привлечению клиентов
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div>
                             <div class="tm-panel-small">
+                                <img class="trash-panel-6" src="images/trash-4.svg" alt="">
                                 <div class="tm-dots-arrow-6"></div>
-                                <button class="tm-dots-button tm-button-bussiness tm-button-secondary uk-button">Получить презентацию<br>и бизнес
+                                <button class="tm-dots-button tm-button-bussiness tm-button-secondary uk-visible@m uk-button" type="button" uk-toggle="target: #modalFormPresentation">
+                                    Получить презентацию<br>и бизнес
                                     план
                                 </button>
                                 <div class="tm-pict-panel-wrap">
@@ -583,19 +777,23 @@
                             </div>
                         </div>
                         <div>
-                            <div class="tm-panel-small  uk-margin-xlarge-top">
+                            <div class="tm-panel-adaptive tm-panel-small uk-margin uk-margin-xlarge-top">
+                                <img class="trash-panel-6" src="images/trash-4.svg" alt="">
                                 <div class="tm-dots-arrow-5"></div>
                                 <div class="tm-pict-panel-wrap">
                                     <img src="images/icon-future-2.svg" alt="">
                                 </div>
                                 <div>
                                     <div class="tm-panel-header">15 дней</div>
-                                    <div class="uk-text-bold">Обучение авторским методикам с поддержкой и аттестацией автором курса</div>
+                                    <div class="uk-text-bold">Обучение авторским методикам с поддержкой и аттестацией
+                                        автором курса
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div>
                             <div class="tm-panel-small">
+                                <img class="trash-panel-6" src="images/trash-4.svg" alt="">
                                 <div class="tm-dots-arrow-4"></div>
                                 <div class="tm-pict-panel-wrap">
                                     <img src="images/icon-future-1.svg" alt="">
@@ -607,6 +805,10 @@
                             </div>
                         </div>
                     </div>
+                    <button class="tm-button-bussiness tm-button-secondary uk-hidden@m uk-margin-medium-top uk-button" type="button" uk-toggle="target: #modalFormPresentation">
+                        Получить презентацию<br>и бизнес
+                        план
+                    </button>
                 </div>
             </div>
 
@@ -614,14 +816,15 @@
             <div class="uk-section">
                 <div class="uk-container-large uk-margin-auto">
                     <h2>Что вы получаете в пакете франшизы</h2>
-                    <div class="uk-grid-small uk-grid-match uk-child-width-expand" uk-grid>
+                    <div class="uk-grid-small uk-grid-match uk-child-width-expand@m" uk-grid>
                         <div>
-                            <div class="tm-card-large tm-card-secondary">
+                            <div class="tm-card-large tm-card-secondary uk-position-relative">
+                                <img class="trash-panel-7" src="images/trash-5.svg" alt="">
                                 <div class="tm-card-head">
                                     <div class="uk-width-expand">
                                         Четкий пошаговый <span class="uk-text-bold">план открытия бизнеса:</span>
                                     </div>
-                                    <div class="uk-width-auto uk-margin-small-left">
+                                    <div class="uk-width-auto uk-visible@s uk-margin-small-left">
                                         <img src="images/img-card-1.svg" alt="">
                                     </div>
                                 </div>
@@ -652,16 +855,17 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="uk-width-auto">
+                        <div class="uk-width-auto uk-visible@m">
                             <img src="images/pict-plus.svg" alt="">
                         </div>
                         <div>
-                            <div class="tm-card-large tm-card-primary">
+                            <div class="tm-card-large tm-card-primary uk-position-relative">
+                                <img class="trash-panel-7" src="images/trash-5.svg" alt="">
                                 <div class="tm-card-head">
                                     <div class="uk-width-expand">
                                         Результативную <span class="uk-text-bold">маркетинговую стратегию:</span>
                                     </div>
-                                    <div class="uk-width-auto uk-margin-small-left">
+                                    <div class="uk-width-auto uk-visible@s uk-margin-small-left">
                                         <img src="images/img-card-2.svg" alt="">
                                     </div>
                                 </div>
@@ -692,72 +896,72 @@
                         сам!
                     </button>
 
-                    <h2 class="uk-text-primary">Мы предлагаем 10 востребованных ниш,</h2>
+                    <h2 class="tm-blue-worm-2 uk-text-primary uk-position-relative">Мы предлагаем 10 востребованных ниш,</h2>
                     <h4 class="tm-text-secondary">
                         из которых вы можете выбрать самые популярные в вашем регионе, чтобы попробовать.
                     </h4>
 
-                    <div class="uk-grid-small uk-child-width-1-5" uk-grid>
+                    <div class="uk-grid-small uk-child-width-1-2@s uk-child-width-1-5@m" uk-grid>
                         <div class="uk-margin-medium-bottom">
                             <img src="images/img-ten-direct-1.svg" alt="">
-                            <div class="uk-text-large uk-text-bold">Скорочтение</div>
+                            <div class="tm-yellow-worm-small uk-position-relative uk-text-large uk-text-bold">Скорочтение</div>
                         </div>
                         <div class="uk-margin-medium-bottom">
                             <img src="images/img-ten-direct-2.svg" alt="">
-                            <div class="uk-text-large uk-text-bold">Ментальная арифметика*</div>
+                            <div class="tm-yellow-worm-small uk-position-relative uk-text-large uk-text-bold">Ментальная арифметика*</div>
                         </div>
                         <div class="uk-margin-medium-bottom">
                             <img src="images/img-ten-direct-3.svg" alt="">
-                            <div class="uk-text-large uk-text-bold">Эмоциональный интеллект</div>
+                            <div class="tm-yellow-worm-small uk-position-relative uk-text-large uk-text-bold">Эмоциональный интеллект</div>
                         </div>
                         <div class="uk-margin-medium-bottom">
                             <img src="images/img-ten-direct-4.svg" alt="">
-                            <div class="uk-text-large uk-text-bold">Детская безопасность</div>
+                            <div class="tm-yellow-worm-small uk-position-relative uk-text-large uk-text-bold">Детская безопасность</div>
                         </div>
                         <div class="uk-margin-medium-bottom">
                             <img src="images/img-ten-direct-5.svg" alt="">
-                            <div class="uk-text-large uk-text-bold">Робототехника*</div>
+                            <div class="tm-yellow-worm-small uk-position-relative uk-text-large uk-text-bold">Робототехника*</div>
                         </div>
                         <div class="uk-margin-medium-bottom">
                             <img src="images/img-ten-direct-6.svg" alt="">
-                            <div class="uk-text-large uk-text-bold">ТРИЗ*</div>
+                            <div class="tm-yellow-worm-small uk-position-relative uk-text-large uk-text-bold">ТРИЗ*</div>
                         </div>
                         <div class="uk-margin-medium-bottom">
                             <img src="images/img-ten-direct-7.svg" alt="">
-                            <div class="uk-text-large uk-text-bold">Финансовая грамотность</div>
+                            <div class="tm-yellow-worm-small uk-position-relative uk-text-large uk-text-bold">Финансовая грамотность</div>
                         </div>
                         <div class="uk-margin-medium-bottom">
                             <img src="images/img-ten-direct-8.svg" alt="">
-                            <div class="uk-text-large uk-text-bold">Ораторское искусство</div>
+                            <div class="tm-yellow-worm-small uk-position-relative uk-text-large uk-text-bold">Ораторское искусство</div>
                         </div>
                         <div class="uk-margin-medium-bottom">
                             <img src="images/img-ten-direct-9.svg" alt="">
-                            <div class="uk-text-large uk-text-bold">Каллиграфия</div>
+                            <div class="tm-yellow-worm-small uk-position-relative uk-text-large uk-text-bold">Каллиграфия</div>
                         </div>
                         <div class="uk-margin-medium-bottom">
                             <img src="images/img-ten-direct-10.svg" alt="">
-                            <div class="uk-text-large uk-text-bold">Программирование</div>
+                            <div class="tm-yellow-worm-small uk-position-relative uk-text-large uk-text-bold">Программирование</div>
                         </div>
                     </div>
                 </div>
                 <div class="uk-container-large uk-margin-auto">
 
-                    <div class="tm-text-secondary uk-width-1-2 uk-margin-large-bottom">
-                        Нейрум эффективна как все вместе взятые франшизы. Пока в других франшизах есть только 1-2 из
-                        этих направлений, вы можете взять все.
+                    <div class="tm-text-secondary uk-width-1-2@m uk-margin-large-bottom">
+                        Нейрум дает больше возможностей, чем любая другая франшиза, ведь у нас есть все самые популярные направления развития детей на ваш выбор.
                     </div>
 
-                    <div class="uk-child-width-1-2 uk-margin-xlarge-bottom" uk-grid>
+                    <div class="uk-child-width-1-2@m uk-margin-xlarge-bottom" uk-grid>
                         <div>
                             <div class="tm-panel-list uk-background-primary">
                                 <div class="tm-panel-list-header">
+                                    <img class="trash-panel-8" src="images/blue-worm.svg" alt="">
                                     <h4 class="uk-text-bold uk-margin-remove">Пакет</h4>
-                                    <h2 class="uk-margin-remove">«Легкий<br/>старт»</h2>
+                                    <h2 class="tm-pakets uk-margin-remove">«Легкий <br class="uk-visible@m"/>старт»</h2>
                                 </div>
                                 <div>
                                     <ul>
                                         <li><span class="uk-text-bold uk-text-large">4 набора для обучения</span>
-                                            (нейрогарнитура+планшет)
+                                            (нейрогарнитура + планшет)
                                         </li>
                                         <li><span
                                                 class="uk-text-bold uk-text-large">3 программы для обучения детей</span>
@@ -781,7 +985,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <button class="tm-button-margin-negative tm-button-bussiness tm-button-secondary uk-button">
+                            <button class="tm-button-margin-negative tm-button-bussiness tm-button-secondary uk-button" type="button" uk-toggle="target: #modalFormPresentation">
                                 Получить презентацию<br>и бизнес
                                 план
                             </button>
@@ -796,13 +1000,14 @@
                         <div>
                             <div class="tm-panel-list uk-background-secondary uk-light">
                                 <div class="tm-panel-list-header">
+                                    <img class="trash-panel-8" src="images/yellow-worm.svg" alt="">
                                     <h4 class="uk-text-bold uk-margin-remove">Пакет</h4>
-                                    <h2 class="uk-margin-remove">«Стандарт<br/>Нейрум»</h2>
+                                    <h2 class="tm-pakets uk-margin-remove">«Стандарт <br class="uk-visible@m"/>Нейрум»</h2>
                                 </div>
                                 <div>
                                     <ul>
                                         <li><span class="uk-text-bold uk-text-large">10 наборов для обучения</span>
-                                            (нейрогарнитура+планшет)
+                                            (нейрогарнитура + планшет)
                                         </li>
                                         <li><span
                                                 class="uk-text-bold uk-text-large">10 программ для обучения детей</span>
@@ -833,7 +1038,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <button class="tm-button-margin-negative tm-button-bussiness tm-button-primary uk-button">
+                            <button class="tm-button-margin-negative tm-button-bussiness tm-button-primary uk-button" type="button" uk-toggle="target: #modalFormPresentation">
                                 Получить презентацию<br>и бизнес
                                 план
                             </button>
@@ -842,10 +1047,12 @@
                 </div>
                 <div class="tm-ten-directions-bottom uk-container-expand">
                     <div class="uk-container-large uk-margin-auto uk-position-relative">
-                        <img class="tm-img-boy-size uk-position-bottom-right" src="images/img-nimbus-boy.png" alt="">
-                        <div class="uk-flex">
+                        <img class="tm-img-boy-size uk-visible@l uk-position-bottom-right"
+                             src="images/img-nimbus-boy.png" alt="">
+                        <div class="uk-flex uk-flex-wrap uk-flex-center uk-flex-left@m">
                             <div>
                                 <div class="tm-panel-medium">
+                                    <img class="trash-panel-1" src="images/trash-5.svg" alt="">
                                     <div class="tm-pict-panel-wrap">
                                         <img src="images/pict-lamp.svg" alt="">
                                     </div>
@@ -857,11 +1064,12 @@
                             </div>
                             <div>
                                 <div class="tm-panel-medium uk-margin-xlarge-top uk-margin-remove-bottom">
+                                    <img class="trash-panel-1" src="images/trash-5.svg" alt="">
                                     <div class="tm-pict-panel-wrap">
                                         <img src="images/pict-money.svg" alt="">
                                     </div>
                                     <div>
-                                        <div class="tm-panel-header">+180 000Р</div>
+                                        <div class="tm-panel-header">+160 000Р</div>
                                         <div>средний ежемесячный доход франчайзи Нейрум</div>
                                     </div>
                                 </div>
@@ -874,13 +1082,13 @@
             <!-- Section -->
             <div class="uk-section">
                 <div class="uk-container-large uk-margin-auto">
-                    <h2 class="uk-margin-remove">Авторы курсов,</h2>
+                    <h2 class="uk-margin-remove uk-text-center uk-text-left@s">Авторы курсов,</h2>
                     <button class="tm-button-badge tm-badge-manage tm-margin-double-bottom uk-button">
                         принявшие участие в разработке
                     </button>
-                    <div class="uk-child-width-1-2 uk-grid-small" uk-grid>
+                    <div class="uk-child-width-auto uk-child-width-1-2@l uk-flex-center uk-grid-small" uk-grid>
                         <div>
-                            <div class="tm-panel-authors uk-margin-large-top uk-margin-large-bottom">
+                            <div class="tm-panel-authors tm-yellow-worm-small-2 uk-margin-large-top uk-margin-large-bottom">
                                 <div class="tm-pict-panel-wrap">
                                     <img src="images/img-author-1.png" alt="">
                                 </div>
@@ -889,7 +1097,7 @@
                                     <div class="uk-text-large">Автор методики по Скорочтению</div>
                                     <div class="uk-text-primary">Россия, Челябинск</div>
                                 </div>
-                                <button class="tm-position-bottom-out tm-button-small tm-button-bussiness tm-button-primary uk-button">
+                                <button class="tm-position-bottom-out tm-button-small tm-button-bussiness tm-button-primary uk-button" type="button" uk-toggle="target: #modalAuthor1">
                                     Подробнее
                                 </button>
                             </div>
@@ -899,19 +1107,19 @@
                                 <div class="tm-pict-panel-wrap">
                                     <img src="images/img-author-2.png" alt="">
                                 </div>
-                                <h4 class="tm-panel-header">Илья Андреевич Мартынов</h4>
+                                <h4 class="tm-panel-header tm-yellow-worm-2 uk-position-relative">Илья Андреевич Мартынов</h4>
                                 <div class="tm-panel-text">
                                     <div class="uk-text-large">Научный руководитель центра</div>
                                     <div class="uk-text-primary">Москва, Санкт-петербург</div>
                                 </div>
-                                <button class="tm-position-bottom-out tm-button-small tm-button-bussiness tm-button-primary uk-button">
+                                <button class="tm-position-bottom-out tm-button-small tm-button-bussiness tm-button-primary uk-button" type="button" uk-toggle="target: #modalAuthor2">
                                     Подробнее
                                 </button>
                             </div>
                         </div>
                         <div></div>
                         <div>
-                            <div class="tm-panel-authors tm-panel-margin-negative uk-margin-large-bottom">
+                            <div class="tm-panel-authors tm-yellow-worm-small-2 tm-panel-margin-negative uk-margin-large-bottom">
                                 <div class="tm-pict-panel-wrap">
                                     <img src="images/img-author-3.png" alt="">
                                 </div>
@@ -920,22 +1128,22 @@
                                     <div class="uk-text-large">Автор курса по Эмоциональному интеллекту</div>
                                     <div class="uk-text-primary">Израиль</div>
                                 </div>
-                                <button class="tm-position-bottom-out tm-button-small tm-button-bussiness tm-button-primary uk-button">
+                                <button class="tm-position-bottom-out tm-button-small tm-button-bussiness tm-button-primary uk-button" type="button" uk-toggle="target: #modalAuthor3">
                                     Подробнее
                                 </button>
                             </div>
                         </div>
                         <div>
-                            <div class="tm-panel-authors">
+                            <div class="tm-panel-authors uk-margin-large-bottom">
                                 <div class="tm-pict-panel-wrap">
                                     <img src="images/img-author-4.png" alt="">
                                 </div>
-                                <h4 class="tm-panel-header">Ефимова Ольга Сергеевна</h4>
+                                <h4 class="tm-panel-header">Ефимова Ольга<br/>Сергеевна</h4>
                                 <div class="tm-panel-text">
                                     <div class="uk-text-large">Автор курса по Ментальной математике</div>
                                     <div class="uk-text-primary">Казань</div>
                                 </div>
-                                <button class="tm-position-bottom-out tm-button-small tm-button-bussiness tm-button-primary uk-button">
+                                <button class="tm-position-bottom-out tm-button-small tm-button-bussiness tm-button-primary uk-button" type="button" uk-toggle="target: #modalAuthor4">
                                     Подробнее
                                 </button>
                             </div>
@@ -950,7 +1158,7 @@
                                     <div class="uk-text-large">Автор курса по Детской безопасности</div>
                                     <div class="uk-text-primary">Пермь</div>
                                 </div>
-                                <button class="tm-position-bottom-out tm-button-small tm-button-bussiness tm-button-primary uk-button">
+                                <button class="tm-position-bottom-out tm-button-small tm-button-bussiness tm-button-primary uk-button" type="button" uk-toggle="target: #modalAuthor5">
                                     Подробнее
                                 </button>
                             </div>
@@ -959,57 +1167,68 @@
                 </div>
             </div>
 
+            <!--БЛОК СПРЯТАН-->
             <!-- Section -->
-            <div class="uk-section">
+            <div class="uk-hidden uk-section">
                 <div class="uk-container-large uk-margin-auto">
                     <h2 class="uk-margin-large-bottom">Наши центры</h2>
-                    <div class="uk-child-width-1-4" uk-grid>
+                    <div class="uk-child-width-1-2@s uk-child-width-1-4@m" uk-grid>
                         <div>
-                            <a href="#" class="tm-img-center-wrap uk-cover-container">
+                            <a href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1"
+                               class="iframe-video tm-img-center-wrap uk-cover-container">
                                 <img src="images/img-center-1.jpg" alt="" uk-cover>
                             </a>
                         </div>
                         <div>
-                            <a href="#" class="tm-img-center-wrap uk-cover-container">
+                            <a href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1"
+                               class="iframe-video tm-img-center-wrap uk-cover-container">
                                 <img src="images/img-center-2.jpg" alt="" uk-cover>
                             </a>
                         </div>
                         <div>
-                            <a href="#" class="tm-img-center-wrap uk-cover-container">
+                            <a href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1"
+                               class="iframe-video tm-img-center-wrap uk-cover-container">
                                 <img src="images/img-center-3.jpg" alt="" uk-cover>
                             </a>
                         </div>
                         <div>
-                            <a href="#" class="tm-img-center-wrap uk-cover-container">
+                            <a href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1"
+                               class="iframe-video tm-img-center-wrap uk-cover-container">
                                 <img src="images/img-center-3.jpg" alt="" uk-cover>
                             </a>
                         </div>
                         <div>
-                            <a href="#" class="tm-img-center-wrap uk-cover-container">
+                            <a href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1"
+                               class="iframe-video tm-img-center-wrap uk-cover-container">
                                 <img src="images/img-center-4.jpg" alt="" uk-cover>
                             </a>
                         </div>
                         <div>
-                            <a href="#" class="tm-img-center-wrap uk-cover-container">
+                            <a href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1"
+                               class="iframe-video tm-img-center-wrap uk-cover-container">
                                 <img src="images/img-center-5.jpg" alt="" uk-cover>
                             </a>
                         </div>
                         <div>
-                            <a href="#" class="tm-img-center-wrap uk-cover-container">
+                            <a href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1"
+                               class="iframe-video tm-img-center-wrap uk-cover-container">
                                 <img src="images/img-center-6.jpg" alt="" uk-cover>
                             </a>
                         </div>
                         <div>
-                            <a href="#" class="tm-img-center-wrap uk-cover-container">
+                            <a href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1"
+                               class="iframe-video tm-img-center-wrap uk-cover-container">
                                 <img src="images/img-center-6.jpg" alt="" uk-cover>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- -->
 
+            <!--БЛОК СПРЯТАН-->
             <!-- Section -->
-            <div class="uk-section">
+            <div class="uk-hidden uk-section">
                 <div class="uk-container-large uk-margin-auto">
                     <h2 class="uk-margin-remove">Отзывы</h2>
                     <button class="tm-button-badge tm-badge-newage tm-margin-double-bottom uk-button">
@@ -1019,49 +1238,62 @@
                     <div class="tm-slider-feedbacks">
                         <div>
                             <div class="tm-slide-wrap">
-                                <div class="tm-slide-inner uk-cover-container">
-                                    <img src="images/slider-img-1.jpg" alt="" uk-cover>
-                                </div>
+                                <a class="iframe-popup" href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1">
+                                    <div class="tm-slide-inner uk-cover-container">
+                                        <img src="images/slider-img-1.jpg" alt="" uk-cover>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                         <div>
                             <div class="tm-slide-wrap">
-                                <div class="tm-slide-inner uk-cover-container">
-                                    <img src="images/slider-img-2.jpg" alt="" uk-cover>
-                                </div>
+                                <a class="iframe-popup" href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1">
+                                    <div class="tm-slide-inner uk-cover-container">
+                                        <img src="images/slider-img-2.jpg" alt="" uk-cover>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                         <div>
                             <div class="tm-slide-wrap">
-                                <div class="tm-slide-inner uk-cover-container">
-                                    <img src="images/slider-img-3.jpg" alt="" uk-cover>
-                                </div>
+                                <a class="iframe-popup" href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1">
+                                    <div class="tm-slide-inner uk-cover-container">
+                                        <img src="images/slider-img-3.jpg" alt="" uk-cover>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                         <div>
                             <div class="tm-slide-wrap">
-                                <div class="tm-slide-inner uk-cover-container">
-                                    <img src="images/slider-img-1.jpg" alt="" uk-cover>
-                                </div>
+                                <a class="iframe-popup" href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1">
+                                    <div class="tm-slide-inner uk-cover-container">
+                                        <img src="images/slider-img-1.jpg" alt="" uk-cover>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                         <div>
                             <div class="tm-slide-wrap">
-                                <div class="tm-slide-inner uk-cover-container">
-                                    <img src="images/slider-img-2.jpg" alt="" uk-cover>
-                                </div>
+                                <a class="iframe-popup" href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1">
+                                    <div class="tm-slide-inner uk-cover-container">
+                                        <img src="images/slider-img-2.jpg" alt="" uk-cover>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                         <div>
                             <div class="tm-slide-wrap">
-                                <div class="tm-slide-inner uk-cover-container">
-                                    <img src="images/slider-img-3.jpg" alt="" uk-cover>
-                                </div>
+                                <a class="iframe-popup" href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1">
+                                    <div class="tm-slide-inner uk-cover-container">
+                                        <img src="images/slider-img-3.jpg" alt="" uk-cover>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- -->
 
             <!-- Section -->
             <div class="tm-last-section uk-section uk-padding-remove-bottom">
@@ -1069,10 +1301,12 @@
                     <h3>Сеть Нейрума непрерывно расширяется</h3>
                 </div>
                 <div class="tm-map uk-container-expand">
-
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A4067591dc5b99900b867c9009dad7801298fc266c8e8d44a0d044fc074f57f27&amp;source=constructor"
+                            width="100%" height="485" frameborder="0"></iframe>
                 </div>
                 <div class="uk-container-large uk-margin-auto uk-margin-large-bottom">
-                    <h3 class="uk-margin-remove-bottom uk-margin-medium-top">Получите презентацию и бизнес-план франшизы</h3>
+                    <h3 class="uk-margin-remove-bottom uk-margin-medium-top">Получите презентацию и бизнес-план
+                        франшизы</h3>
                     <button class="tm-button-badge tm-badge-newage tm-margin-double-bottom uk-button">
                         для вашего города
                     </button>
@@ -1102,16 +1336,16 @@
                             <div class="uk-navbar">
                                 <!--logo-->
                                 <a class="uk-navbar-item uk-logo" href="/">
-                                    <img src="images/logo.png" alt="">
+                                    <img src="images/logo-black.svg" alt="">
                                 </a>
-                                <div class="uk-navbar-item uk-text-bold">
+                                <div class="uk-navbar-item uk-text-bold uk-visible@l">
                                     Франшиза детского развивающего<br/>центра “Фабрика ума”
                                 </div>
 
                             </div>
 
-                            <div class="uk-navbar">
-                                <ul class="tm-icon-social uk-iconnav">
+                            <div class="uk-navbar uk-flex-wrap uk-flex-center">
+                                <ul class="tm-icon-social tm-margin-adapt uk-iconnav">
                                     <li><a href="#">
                                         <img src="images/icon-footer-vk.svg" alt="">
                                     </a></li>
@@ -1122,11 +1356,22 @@
                                         <img src="images/icon-footer-inst.svg" alt="">
                                     </a></li>
                                 </ul>
+                                <ul class="tm-icon-social tm-margin-adapt uk-iconnav uk-hidden@m">
+                                    <li><a href="#">
+                                        <img class="uk-preserve" src="images/icon-telegram.svg" alt="" uk-svg>
+                                    </a></li>
+                                    <li><a href="#">
+                                        <img class="uk-preserve" src="images/icon-whatsapp.svg" alt="" uk-svg>
+                                    </a></li>
+                                    <li><a href="#">
+                                        <img class="uk-preserve" src="images/icon-viber.svg" alt="" uk-svg>
+                                    </a></li>
+                                </ul>
                             </div>
 
                             <div class="uk-navbar">
 
-                                <ul class="tm-icon-social uk-iconnav">
+                                <ul class="tm-icon-social uk-iconnav uk-visible@m">
                                     <li><a href="#">
                                         <img class="uk-preserve" src="images/icon-telegram.svg" alt="" uk-svg>
                                     </a></li>
@@ -1138,11 +1383,13 @@
                                     </a></li>
                                 </ul>
 
-                                <div class="uk-navbar-item">
+                                <div class="tm-margin-auto-s uk-navbar-item">
                                     <form class="uk-flex uk-flex-column" action="javascript:void(0)">
                                         <input class="uk-input uk-form-width-small" type="text"
                                                placeholder="+7 963 313 4156">
-                                        <button class="uk-button uk-button-link" type="submit">Заказать обратный звонок</button>
+                                        <button class="uk-button uk-button-link" type="submit" type="button" uk-toggle="target: #modalFormPhone">Заказать обратный
+                                            звонок
+                                        </button>
                                     </form>
                                 </div>
                             </div>
@@ -1170,6 +1417,197 @@
         </div>
     </div>
 
+</div>
+
+<div id="modalAuthor1" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+
+        <div class="tm-panel-authors-long uk-margin-large-bottom">
+            <div class="tm-pict-panel-wrap">
+                <img src="images/img-author-1.png" alt="">
+            </div>
+            <h4 class="tm-panel-header tm-yellow-worm-2 uk-position-relative">Вера<br/>Самойлова</h4>
+            <div class="tm-panel-text">
+                <div class="uk-text-large">Автор методики по Скорочтению</div>
+                <div class="uk-text-primary">Россия, Челябинск</div>
+            </div>
+            <ul>
+                <li>Кандидат педагогических наук (13.00.08 – Теория и методика профессионального образования)</li>
+                <li>Автор более 20 научных публикаций и статей</li>
+                <li>Сертифицированный тренер по ментальной арифметике</li>
+                <li>Руководитель школы ментальной арифметики АМА-Казань (г. Казань)</li>
+                <li>Автор методики преподавания ментальной арифметики для детей от 5 до 12 лет</li>
+                <li>Мама двух замечательных мальчишек</li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<div id="modalAuthor2" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+
+        <div class="tm-panel-authors-long uk-margin-large-bottom">
+            <div class="tm-pict-panel-wrap">
+                <img src="images/img-author-2.png" alt="">
+            </div>
+            <h4 class="tm-panel-header tm-yellow-worm-2 uk-position-relative">Илья Андреевич Мартынов</h4>
+            <div class="tm-panel-text">
+                <div class="uk-text-large">Научный руководитель центра</div>
+                <div class="uk-text-primary">Москва, Санкт-петербург</div>
+            </div>
+            <ul>
+                <li>Кандидат педагогических наук (13.00.08 – Теория и методика профессионального образования)</li>
+                <li>Автор более 20 научных публикаций и статей</li>
+                <li>Сертифицированный тренер по ментальной арифметике</li>
+                <li>Руководитель школы ментальной арифметики АМА-Казань (г. Казань)</li>
+                <li>Автор методики преподавания ментальной арифметики для детей от 5 до 12 лет</li>
+                <li>Мама двух замечательных мальчишек</li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<div id="modalAuthor3" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+
+        <div class="tm-panel-authors-long uk-margin-large-bottom">
+            <div class="tm-pict-panel-wrap">
+                <img src="images/img-author-3.png" alt="">
+            </div>
+            <h4 class="tm-panel-header tm-yellow-worm-2 uk-position-relative">Надежда<br/>Столярова<br/>(Фельдман)</h4>
+            <div class="tm-panel-text">
+                <div class="uk-text-large">Автор курса по Эмоциональному интеллекту</div>
+                <div class="uk-text-primary">Израиль</div>
+            </div>
+            <ul>
+                <li>Кандидат педагогических наук (13.00.08 – Теория и методика профессионального образования)</li>
+                <li>Автор более 20 научных публикаций и статей</li>
+                <li>Сертифицированный тренер по ментальной арифметике</li>
+                <li>Руководитель школы ментальной арифметики АМА-Казань (г. Казань)</li>
+                <li>Автор методики преподавания ментальной арифметики для детей от 5 до 12 лет</li>
+                <li>Мама двух замечательных мальчишек</li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<div id="modalAuthor4" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+
+        <div class="tm-panel-authors-long uk-margin-large-bottom">
+            <div class="tm-pict-panel-wrap">
+                <img src="images/img-author-4.png" alt="">
+            </div>
+            <h4 class="tm-panel-header tm-yellow-worm-2 uk-position-relative">Ефимова Ольга<br/>Сергеевна</h4>
+            <div class="tm-panel-text">
+                <div class="uk-text-large">Автор курса по Ментальной математике</div>
+                <div class="uk-text-primary">Казань</div>
+            </div>
+            <ul>
+                <li>Кандидат педагогических наук (13.00.08 – Теория и методика профессионального образования)</li>
+                <li>Автор более 20 научных публикаций и статей</li>
+                <li>Сертифицированный тренер по ментальной арифметике</li>
+                <li>Руководитель школы ментальной арифметики АМА-Казань (г. Казань)</li>
+                <li>Автор методики преподавания ментальной арифметики для детей от 5 до 12 лет</li>
+                <li>Мама двух замечательных мальчишек</li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<div id="modalAuthor5" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+
+        <div class="tm-panel-authors-long uk-margin-large-bottom">
+            <div class="tm-pict-panel-wrap">
+                <img src="images/img-author-5.png" alt="">
+            </div>
+            <h4 class="tm-panel-header tm-yellow-worm-2 uk-position-relative">Светлана<br/>Неволина</h4>
+            <div class="tm-panel-text">
+                <div class="uk-text-large">Автор курса по Детской безопасности</div>
+                <div class="uk-text-primary">Пермь</div>
+            </div>
+            <ul>
+                <li>Кандидат педагогических наук (13.00.08 – Теория и методика профессионального образования)</li>
+                <li>Автор более 20 научных публикаций и статей</li>
+                <li>Сертифицированный тренер по ментальной арифметике</li>
+                <li>Руководитель школы ментальной арифметики АМА-Казань (г. Казань)</li>
+                <li>Автор методики преподавания ментальной арифметики для детей от 5 до 12 лет</li>
+                <li>Мама двух замечательных мальчишек</li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<div id="modalFormPresentation" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-width-auto uk-modal-body uk-margin-auto-vertical">
+
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+
+        <div class="tm-panel-modal-form">
+            <h2 class="tm-panel-header tm-yellow-worm-2 uk-position-relative">Получить презентацию и бизнес-план</h2>
+            <div class="tm-form">
+                <form action="javascript:void(0)">
+                    <div class="uk-margin">
+                        <input class=" uk-input" type="text" placeholder="Ваше имя">
+                    </div>
+                    <div class="uk-margin">
+                        <input class=" uk-input" type="text" placeholder="Ваш email">
+                    </div>
+                    <div class="uk-margin">
+                        <input class=" uk-input" type="text" placeholder="Ваш телефон">
+                    </div>
+                    <div class="uk-margin">
+                        <input class=" uk-input" type="text" placeholder="Ваш город">
+                    </div>
+                    <button class="tm-button-bussiness uk-button tm-button-primary" type="submit">
+                        Отправить
+                    </button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div id="modalFormPhone" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-width-auto uk-modal-body uk-margin-auto-vertical">
+
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+
+        <div class="tm-panel-modal-form">
+            <h2 class="tm-panel-header tm-yellow-worm-2 uk-position-relative">Получить презентацию и бизнес-план</h2>
+            <div class="tm-form">
+                <form action="javascript:void(0)">
+                    <div class="uk-margin">
+                        <input class=" uk-input" type="text" placeholder="Ваше имя">
+                    </div>
+                    <div class="uk-margin">
+                        <input class=" uk-input" type="text" placeholder="Ваш телефон">
+                    </div>
+                    <button class="tm-button-bussiness tm-btn-form-adaptive uk-button tm-button-primary" type="submit">
+                        Заказать<br/>обратный звонок
+                    </button>
+                </form>
+            </div>
+        </div>
+
+    </div>
 </div>
 
 <!-- UIkit JS -->
